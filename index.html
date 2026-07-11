@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MolySchreiber – Datenschutzerklärung / Privacy Policy</title>
+<style>
+  :root { --blue:#1E5AA8; }
+  * { box-sizing:border-box; }
+  body { font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+         line-height:1.6; color:#1a1a1a; max-width:760px; margin:0 auto;
+         padding:2rem 1.25rem; background:#fff; }
+  h1 { color:var(--blue); font-size:1.7rem; margin-bottom:.2rem; }
+  h2 { color:var(--blue); font-size:1.25rem; margin-top:2rem;
+       border-bottom:2px solid #e6eef7; padding-bottom:.3rem; }
+  h3 { font-size:1.05rem; margin-top:1.4rem; }
+  .meta { color:#555; font-size:.9rem; margin-bottom:1.5rem; }
+  .langswitch { margin:1rem 0 2rem; font-size:.95rem; }
+  .langswitch a { color:var(--blue); text-decoration:none; font-weight:600; }
+  hr { border:none; border-top:1px solid #e0e0e0; margin:3rem 0; }
+  code { background:#f2f5f9; padding:.1rem .35rem; border-radius:4px; font-size:.9em; }
+  a { color:var(--blue); }
+  footer { margin-top:3rem; color:#777; font-size:.85rem; }
+</style>
+</head>
+<body>
+
+<div class="langswitch">🇩🇪 <a href="#de">Deutsch</a> &nbsp;·&nbsp; 🇬🇧 <a href="#en">English</a></div>
+
+<!-- ===================== DEUTSCH ===================== -->
+<section id="de" lang="de">
+<h1>Datenschutzerklärung – MolySchreiber</h1>
+<p class="meta">Stand: Juli 2026 · App-Paket: <code>de.molyschreiber</code></p>
+
+<p>MolySchreiber ist eine Android-Tastatur (Eingabemethode/IME) mit vollständig
+lokaler Spracherkennung für Deutsch und Englisch. Der Schutz deiner Daten ist
+kein Zusatz, sondern der Kern der App: Deine Sprache und deine Eingaben bleiben
+auf deinem Gerät.</p>
+
+<h2>1. Verantwortlicher</h2>
+<p>Verantwortlich für die Datenverarbeitung im Sinne der DSGVO ist der Entwickler
+von MolySchreiber. Kontakt:
+<a href="mailto:sec121@gmx.de">sec121@gmx.de</a></p>
+
+<h2>2. Kurzfassung</h2>
+<p>MolySchreiber erhebt keine personenbezogenen Daten, erstellt keine Profile,
+nutzt keine Werbung, keine Analyse- oder Tracking-Dienste, verlangt keine
+Registrierung und kein Nutzerkonto. Es gibt keinen Server, der deine Inhalte
+empfängt. Die einzige Netzwerkverbindung dient dem einmaligen Herunterladen des
+Sprachmodells (siehe Abschnitt 5).</p>
+
+<h2>3. Spracherkennung (Mikrofon / RECORD_AUDIO)</h2>
+<p>Wenn du die Mikrofontaste der Tastatur betätigst, nimmt die App Audio auf und
+erkennt daraus Text. Diese Verarbeitung findet <strong>zu 100 % lokal auf deinem
+Gerät</strong> statt.</p>
+<ul>
+  <li>Das aufgenommene Audio wird <strong>ausschließlich im Arbeitsspeicher (RAM)</strong>
+      verarbeitet.</li>
+  <li>Es wird <strong>nicht auf dem Gerät gespeichert</strong> (keine Audiodateien) und
+      <strong>nie an einen Server übertragen</strong>.</li>
+  <li>Nach Abschluss der Erkennung wird das Audio aus dem Speicher verworfen.</li>
+  <li>In Passwortfeldern wird das Diktat automatisch deaktiviert.</li>
+</ul>
+
+<h2>4. Tastatureingaben (IME)</h2>
+<p>Als Eingabemethode verarbeitet MolySchreiber technisch bedingt den Text, den du
+tippst oder diktierst, um ihn an die jeweilige App zu übergeben. MolySchreiber
+<strong>protokolliert diese Eingaben nicht</strong>, speichert sie nicht in einer
+Historie, wertet sie nicht aus und überträgt sie nicht. Es gibt kein Keylogging,
+kein Wörterbuch-Upload und keine Cloud-Synchronisierung von Eingaben.</p>
+
+<h2>5. Netzwerkzugriff und Modell-Download (INTERNET, ACCESS_NETWORK_STATE)</h2>
+<p>Damit die Erkennung lokal laufen kann, wird nach der Installation einmalig ein
+Sprachmodell (~210 MB) heruntergeladen. Dieser Download erfolgt von
+<strong>Hugging Face</strong> (huggingface.co). Dabei entsteht – wie bei jedem
+Internetabruf – serverseitig beim Anbieter ein technischer Zugriffseintrag
+(z. B. IP-Adresse, Zeitpunkt), auf den MolySchreiber keinen Einfluss hat und
+den die App nicht verwendet. Es gelten die Datenschutzbestimmungen von Hugging
+Face. Die Berechtigung <code>ACCESS_NETWORK_STATE</code> dient nur dazu, dich vor
+dem großen Download auf eine WLAN-Verbindung hinzuweisen. Nach dem Download
+funktioniert das Diktat vollständig offline.</p>
+
+<h2>6. Absturzberichte und „Feedback senden“</h2>
+<p>Sollte die App abstürzen, wird ein technischer Absturzbericht
+<strong>ausschließlich lokal auf deinem Gerät</strong> abgelegt. Es findet
+<strong>keine automatische Übertragung</strong> statt. Nur wenn du in den
+Einstellungen unter „Über &amp; Lizenzen“ aktiv auf <strong>„Feedback senden“</strong>
+tippst, öffnet die App eine vorbefüllte E-Mail (mit Geräteinformationen, einem
+Logauszug und ggf. dem letzten Absturzbericht). Diesen Inhalt kannst du vor dem
+Versenden vollständig einsehen, bearbeiten oder löschen. Der Versand erfolgt nur
+durch dich und über deine eigene E-Mail-App.</p>
+
+<h2>7. Berechtigungen im Überblick</h2>
+<ul>
+  <li><code>RECORD_AUDIO</code> – Diktat; Audio nur im RAM, nicht gespeichert, nicht übertragen.</li>
+  <li><code>INTERNET</code> – ausschließlich der einmalige Modell-Download.</li>
+  <li><code>ACCESS_NETWORK_STATE</code> – WLAN-Hinweis vor dem Download.</li>
+</ul>
+
+<h2>8. Keine Weitergabe an Dritte</h2>
+<p>Da keine personenbezogenen Daten erhoben werden, werden auch keine Daten an
+Dritte weitergegeben oder verkauft.</p>
+
+<h2>9. Kinder</h2>
+<p>Die App richtet sich an Nutzer ab 18 Jahren und erhebt keine Daten von
+Kindern.</p>
+
+<h2>10. Deine Rechte</h2>
+<p>Da MolySchreiber keine personenbezogenen Daten erhebt oder speichert, liegen
+keine Daten vor, die berichtigt, gelöscht oder herausgegeben werden könnten.
+Ein lokal gespeichertes Sprachmodell oder einen lokalen Absturzbericht kannst du
+jederzeit selbst über die App bzw. die Android-Einstellungen entfernen. Bei
+Fragen erreichst du uns unter
+<a href="mailto:sec121@gmx.de">sec121@gmx.de</a>.</p>
+
+<h2>11. Änderungen</h2>
+<p>Bei Änderungen dieser Erklärung aktualisieren wir das Datum oben. Die jeweils
+aktuelle Fassung ist unter dieser Adresse abrufbar.</p>
+</section>
+
+<hr>
+
+<!-- ===================== ENGLISH ===================== -->
+<section id="en" lang="en">
+<h1>Privacy Policy – MolySchreiber</h1>
+<p class="meta">Last updated: July 2026 · App package: <code>de.molyschreiber</code></p>
+
+<p>MolySchreiber is an Android keyboard (input method / IME) with fully on-device
+speech recognition for German and English. Protecting your data is not an add-on
+but the core of the app: your voice and your input stay on your device.</p>
+
+<h2>1. Data controller</h2>
+<p>The party responsible for data processing under the GDPR is the developer of
+MolySchreiber. Contact:
+<a href="mailto:sec121@gmx.de">sec121@gmx.de</a></p>
+
+<h2>2. Summary</h2>
+<p>MolySchreiber collects no personal data, builds no profiles, contains no ads,
+uses no analytics or tracking services, and requires no registration or user
+account. There is no server that receives your content. The only network
+connection is the one-time download of the speech model (see section 5).</p>
+
+<h2>3. Speech recognition (microphone / RECORD_AUDIO)</h2>
+<p>When you press the keyboard's microphone button, the app records audio and
+turns it into text. This processing happens <strong>100% locally on your
+device</strong>.</p>
+<ul>
+  <li>Recorded audio is processed <strong>only in memory (RAM)</strong>.</li>
+  <li>It is <strong>never stored on the device</strong> (no audio files) and
+      <strong>never transmitted to any server</strong>.</li>
+  <li>Once recognition is complete, the audio is discarded from memory.</li>
+  <li>Dictation is automatically disabled in password fields.</li>
+</ul>
+
+<h2>4. Keyboard input (IME)</h2>
+<p>As an input method, MolySchreiber necessarily processes the text you type or
+dictate in order to hand it to the app you are using. MolySchreiber
+<strong>does not log this input</strong>, does not store it in any history, does
+not analyse it, and does not transmit it. There is no keylogging, no dictionary
+upload, and no cloud synchronisation of input.</p>
+
+<h2>5. Network access and model download (INTERNET, ACCESS_NETWORK_STATE)</h2>
+<p>To enable on-device recognition, a speech model (~210 MB) is downloaded once
+after installation. This download comes from <strong>Hugging Face</strong>
+(huggingface.co). As with any internet request, this creates a technical access
+record on the provider's servers (e.g. IP address, timestamp) that MolySchreiber
+neither controls nor uses. Hugging Face's privacy terms apply. The
+<code>ACCESS_NETWORK_STATE</code> permission is used only to warn you to be on
+Wi-Fi before the large download. After the download, dictation works fully
+offline.</p>
+
+<h2>6. Crash reports and “Send feedback”</h2>
+<p>If the app crashes, a technical crash report is stored <strong>only locally on
+your device</strong>. There is <strong>no automatic transmission</strong>. Only if
+you actively tap <strong>“Send feedback”</strong> under “About &amp; Licenses” in the
+settings does the app open a pre-filled e-mail (containing device information, a
+log excerpt, and possibly the last crash report). You can review, edit, or delete
+this content in full before sending. Sending happens only through you and your own
+e-mail app.</p>
+
+<h2>7. Permissions at a glance</h2>
+<ul>
+  <li><code>RECORD_AUDIO</code> – dictation; audio in RAM only, not stored, not transmitted.</li>
+  <li><code>INTERNET</code> – solely the one-time model download.</li>
+  <li><code>ACCESS_NETWORK_STATE</code> – Wi-Fi reminder before the download.</li>
+</ul>
+
+<h2>8. No sharing with third parties</h2>
+<p>Because no personal data is collected, no data is shared with or sold to third
+parties.</p>
+
+<h2>9. Children</h2>
+<p>The app is intended for users aged 18 and over and does not collect data from
+children.</p>
+
+<h2>10. Your rights</h2>
+<p>Because MolySchreiber collects and stores no personal data, there is no data
+that could be corrected, deleted, or exported. You can remove a locally stored
+speech model or a local crash report at any time yourself via the app or Android
+settings. For questions, contact us at
+<a href="mailto:sec121@gmx.de">sec121@gmx.de</a>.</p>
+
+<h2>11. Changes</h2>
+<p>If this policy changes, we will update the date above. The current version is
+always available at this address.</p>
+</section>
+
+<footer>MolySchreiber · <a href="mailto:sec121@gmx.de">sec121@gmx.de</a></footer>
+
+</body>
+</html>
