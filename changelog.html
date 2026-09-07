@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SchreiBär – Changelog</title>
+<meta name="description" content="Was bei SchreiBär zuletzt neu ist und behoben wurde.">
+<meta property="og:title" content="SchreiBär – Changelog">
+<meta property="og:description" content="Was bei SchreiBär zuletzt neu ist und behoben wurde.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%90%BB%3C/text%3E%3C/svg%3E">
+<style>
+  :root {
+    --blau: #1E5AA8;
+    --blau-dunkel: #16447F;
+    --orange: #E8892B;
+    --text: #24292f;
+    --grau: #57606a;
+    --rand: #d0d7de;
+    --bg: #f6f8fa;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+  }
+  .kopf {
+    background: linear-gradient(135deg, var(--blau-dunkel), var(--blau));
+    color: #fff;
+    padding: 32px 20px 28px;
+    text-align: center;
+  }
+  .kopf h1 { margin: 0 0 6px; font-size: 1.7em; }
+  .kopf p { margin: 0; color: #dbe6f5; font-size: 0.98em; }
+  .kopf a.zurueck {
+    display: inline-block;
+    margin-top: 14px;
+    color: #fff;
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.4);
+    padding: 6px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 0.9em;
+  }
+  main { max-width: 720px; margin: 0 auto; padding: 28px 20px 56px; }
+  .karte {
+    background: #fff;
+    border: 1px solid var(--rand);
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin: 12px 0;
+  }
+  .karte.aktuell { border-color: var(--orange); border-width: 2px; }
+  .karte h3 { margin: 0 0 6px; font-size: 1.05em; color: var(--blau-dunkel); }
+  .karte p { margin: 4px 0; font-size: 0.95em; color: var(--text); }
+  .frage {
+    margin-top: 8px;
+    font-size: 0.9em;
+    color: var(--blau-dunkel);
+    background: #eef3fa;
+    border-radius: 8px;
+    padding: 8px 12px;
+  }
+  h2 { font-size: 1.15em; color: var(--blau); margin: 32px 0 4px; }
+  .aelter { font-size: 0.92em; color: var(--grau); }
+  .aelter li { margin: 6px 0; }
+  footer { text-align: center; color: var(--grau); font-size: 0.85em; padding: 24px 16px 40px; }
+  footer a { color: var(--blau); }
+</style>
+</head>
+<body>
+
+<div class="kopf">
+  <h1>SchreiBär – Changelog 🐻</h1>
+  <p>Kompakte Übersicht: was zuletzt neu ist, was behoben wurde, welche Fragen offen sind.</p>
+  <a class="zurueck" href="test.html">← Zurück zur Tester-Seite</a>
+</div>
+
+<main>
+
+<div class="karte aktuell">
+  <h3>0.12.2 — Autokorrektur greift wieder richtig</h3>
+  <p>Die Tippkorrektur war zu vorsichtig eingestellt und fasste kaum noch etwas an. Jetzt korrigiert sie kleingeschriebene Wörter wie vorgesehen; groß begonnene Wörter bleiben bewusst unangetastet, weil das meist Eigennamen sind.</p>
+</div>
+
+<div class="karte">
+  <h3>0.12.1 — Vorschlagsleiste: ersetzen und Vertipper abfangen</h3>
+  <p>Ein angetippter Vorschlag ersetzt jetzt zuverlässig das ganze angefangene Wort. Neu: Zu Vertippern ab vier Zeichen werden zusätzlich passende Wörter im Tastenabstand 1 vorgeschlagen.</p>
+  <p class="frage">Frage an dich: Ersetzt der Vorschlag jetzt überall richtig — und stehen die neuen Vertipper-Vorschläge im Weg?</p>
+</div>
+
+<div class="karte">
+  <h3>0.12.0 — Die erste Autokorrektur beim Tippen</h3>
+  <p>Ein danebengetipptes Wort wird beim Abschluss (Leerzeichen, Satzzeichen, Enter) automatisch korrigiert, sofern eindeutig. Die Rücktaste macht eine Korrektur sofort wieder rückgängig. Standardmäßig an, abschaltbar in den Tipp-Einstellungen.</p>
+  <p class="frage">Frage an dich: Korrigiert die Tastatur brauchbar, ohne im Weg zu sein — und nimmt die Rücktaste zuverlässig zurück?</p>
+</div>
+
+<div class="karte">
+  <h3>0.11.0 — Fundament für die Autokorrektur</h3>
+  <p>Das gerade getippte Wort ist jetzt unterstrichen, bis es abgeschlossen ist. Sonst soll sich nichts geändert haben — noch keine echte Autokorrektur.</p>
+  <p class="frage">Frage an dich: Fühlt sich sonst irgendetwas anders an als vorher?</p>
+</div>
+
+<div class="karte">
+  <h3>0.10.2 — Sicherheitshärtung beim Modell-Download</h3>
+  <p>Das nachgeladene Sprachmodell wird jetzt per Prüfsumme (SHA256) validiert statt nur grob geschätzt. Downloads brechen bei vorübergehenden Serverfehlern nicht mehr komplett ab. Nutzersichtbar ändert sich nichts.</p>
+</div>
+
+<div class="karte">
+  <h3>0.10.1 — Wischen: Bugfix für aufeinanderfolgende Wörter</h3>
+  <p>Nach dem letzten Wisch-Update verstellte ein zweites gewischtes Wort das vorherige. Behoben.</p>
+</div>
+
+<div class="karte">
+  <h3>0.10.0 — E-Mail-/Adressfelder halten sich zurück</h3>
+  <p>In E-Mail-, Adress- und Internetadressfeldern gibt es jetzt keine Wortvorschläge, keine automatische Großschreibung und kein Wischen mehr — diese Felder wollen keine Wörterbuchhilfe.</p>
+</div>
+
+<div class="karte">
+  <h3>0.9.4 / 0.9.3 / 0.9.2 — Der Wischabsturz wird sichtbar gemacht</h3>
+  <p>Über drei Versionen: Der bekannte Absturz beim Wischen ist noch nicht endgültig behoben, aber jetzt genau protokolliert (Wegmarken, Speicherdiagnose) und sein Schaden begrenzt — jeder Absturz liefert jetzt verwertbare Hinweise für die nächste Reparatur.</p>
+</div>
+
+<div class="karte">
+  <h3>0.9.1 — Datenschutz-Härtung</h3>
+  <p>Das persönliche Wörterbuch wird nicht mehr ins Cloud-Backup gesichert. Das Wischprotokoll speichert keine Klartext-Wörter mehr, nur noch Länge und Erkennungssicherheit. Diktat und Wischen sind in Passwortfeldern jetzt konsequent deaktiviert.</p>
+</div>
+
+<div class="karte">
+  <h3>0.9.0 — Die Wortliste bessert das Diktat nach</h3>
+  <p>Undeutlich gesprochene, lautgetreu falsch erkannte Wörter (z. B. „fielleicht" statt „vielleicht") werden jetzt still korrigiert — nur bei kleingeschriebenen, eindeutigen Kandidaten, damit keine Namen verbogen werden.</p>
+</div>
+
+<div class="karte">
+  <h3>0.8.x — Größerer Wortschatz und Alltagssprache</h3>
+  <p>Die Wortliste wuchs von 80.000/40.000 auf 100.000/50.000 Wörter (Deutsch/Englisch) und kennt jetzt auch Alltagssprache wie „tschüss", „nö", „kannste", „ok", „btw".</p>
+</div>
+
+<div class="karte">
+  <h3>0.7.x — Eigene Wörter werden wischbar</h3>
+  <p>Wörter aus dem persönlichen Wörterbuch und oft getippte Wörter lassen sich jetzt auch wischen, nicht nur tippen. Die Vorschlagsleiste sortiert seither nach Relevanz statt starrer Quellen-Reihenfolge.</p>
+</div>
+
+<h2>Ältere Versionen</h2>
+<ul class="aelter">
+  <li><strong>0.6.x</strong> — Wörterbuch-Fundament (Schreibweisen, Rauschgrenze) und bessere Diagnose beim Wischabsturz.</li>
+  <li><strong>0.5.x</strong> — Wischeingabe eingeführt: ein Wort in einer Fingerbewegung schreiben.</li>
+  <li><strong>0.4.x</strong> — Sprachbefehle beim Diktieren („Komma", „neue Zeile" …), Emoji-Tastatur, Textbearbeitungs-Panel, Übersetzungsmodus (Deutsch ↔ Englisch), Lernen aus dem Tippen.</li>
+  <li><strong>0.3.8</strong> — Umbenennung von MolySchreiber zu SchreiBär.</li>
+  <li><strong>0.3.x</strong> — Grundlegende Wörterbuch- und UI-Verbesserungen.</li>
+  <li><strong>0.2.0 / 0.1.0</strong> — Erste Testgruppen-Version.</li>
+</ul>
+
+</main>
+
+<footer>
+  SchreiBär · Diktieren ohne Cloud ·
+  <a href="test.html">Zur Tester-Seite</a> ·
+  <a href="index.html">Datenschutzerklärung</a>
+</footer>
+
+</body>
+</html>
