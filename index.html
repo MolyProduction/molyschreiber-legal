@@ -69,6 +69,19 @@ tippst oder diktierst, um ihn an die jeweilige App zu übergeben. MolySchreiber
 Historie, wertet sie nicht aus und überträgt sie nicht. Es gibt kein Keylogging,
 kein Wörterbuch-Upload und keine Cloud-Synchronisierung von Eingaben.</p>
 
+<h2>Anpassung der Trefferflächen.</h2>
+<p>Wenn „Aus Tippen lernen" eingeschaltet ist, merkt sich SchreiBär, wo dein Finger auf den Buchstabentasten aufsetzt. Gespeichert werden
+je Tastenposition nur Anzahlen und Summen der Abstände zur Tastenmitte, getrennt nach
+Tastaturgröße, Ausrichtung und Layout. Es werden kein Text, keine Reihenfolge der
+Anschläge und keine Zeitpunkte gespeichert. Weil jede Tastenposition einem Buchstaben
+entspricht, lässt sich daraus höchstens ablesen, wie oft ein Buchstabe getippt wurde.
+Aus diesen Werten verschiebt die Tastatur die Grenzen zwischen den Tasten leicht,
+damit sie zu deiner Tippweise passen. Die Daten liegen nur im privaten Speicher der
+App auf deinem Gerät, sind von der Android-Datensicherung ausgenommen und werden nie
+übertragen. In Passwort- und Inkognito-Feldern wird nichts erfasst. Wenn du „Aus
+Tippen lernen" abschaltest oder „Gelerntes löschen" wählst, werden die Daten sofort
+gelöscht.</p>
+  
 <h2>5. Netzwerkzugriff und Modell-Download (INTERNET, ACCESS_NETWORK_STATE)</h2>
 <p>Damit die Erkennung lokal laufen kann, wird nach der Installation einmalig ein
 Sprachmodell (~210 MB) heruntergeladen. Dieser Download erfolgt von
@@ -159,15 +172,25 @@ dictate in order to hand it to the app you are using. MolySchreiber
 not analyse it, and does not transmit it. There is no keylogging, no dictionary
 upload, and no cloud synchronisation of input.</p>
 
-<h2>5. Network access and model download (INTERNET, ACCESS_NETWORK_STATE)</h2>
-<p>To enable on-device recognition, a speech model (~210 MB) is downloaded once
-after installation. This download comes from <strong>Hugging Face</strong>
-(huggingface.co). As with any internet request, this creates a technical access
-record on the provider's servers (e.g. IP address, timestamp) that MolySchreiber
-neither controls nor uses. Hugging Face's privacy terms apply. The
-<code>ACCESS_NETWORK_STATE</code> permission is used only to warn you to be on
-Wi-Fi before the large download. After the download, dictation works fully
-offline.</p>
+<h2>4. Keyboard input (IME)</h2>
+<p>As an input method, MolySchreiber necessarily processes the text you type or
+dictate in order to hand it to the app you are using. MolySchreiber
+<strong>does not log this input</strong>, does not store it in any history, does
+not analyse it, and does not transmit it. There is no keylogging, no dictionary
+upload, and no cloud synchronisation of input.</p>
+  
+
+<h2>Touch area adjustment.</h2>
+<p>When "Learn from typing" is on, SchreiBär notes where your
+finger lands on the letter keys. For each key position it stores only counts and sums
+of the distance from the key centre, separately for keyboard size, orientation and
+layout. It stores no text, no order of keystrokes and no timestamps. Since each key
+position corresponds to a letter, the most this reveals is how often a letter was
+typed. From these values the keyboard shifts the borders between keys slightly to fit
+the way you type. The data stays in the app's private storage on your device, is
+excluded from Android backup and is never transmitted. Nothing is recorded in password
+or incognito fields. Turning off "Learn from typing" or choosing "Delete learned words"
+deletes it immediately.</p>
 
 <h2>6. Crash reports and “Send feedback”</h2>
 <p>If the app crashes, a technical crash report is stored <strong>only locally on
